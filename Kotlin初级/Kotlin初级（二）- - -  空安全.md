@@ -8,7 +8,7 @@ Kotlin中的变量修饰符只有两个
 > var修饰的变量不可为null，val修饰的可为null
 
 
-```
+```kotlin
 val a: Int? = null
 var b: Int
 ```
@@ -20,7 +20,7 @@ var b: Int
 #### if else
 
 
-```
+```kotlin
 val str: String? = null
 if(str == null){
     
@@ -34,14 +34,14 @@ if(str == null){
 这种用法大量用于链式操作，能有效避免空指针异常
 
 
-```
+```kotlin
 var str: String? = null
 print(str?.length)
 ```
 ### 链式调用
 
 
-```
+```kotlin
 print(str?.length?.plus(5)?.minus(10))
 ```
 
@@ -53,7 +53,7 @@ print(str?.length?.plus(5)?.minus(10))
 - let的用法： 变量?.let{}
 
 
-```
+```kotlin
 val arrTest : Array<Int?> = arrayOf(1,2,null,3,null,5,6,null)
 
 // 传统写法
@@ -75,7 +75,7 @@ for (index in arrTest) {
 > 当我们定义了一个可空类型的变量时，如果该变量不为空，则使用，繁殖使用另外一个不为空的值
 
 
-```
+```kotlin
 val testStr : String? = null
 
 var length = 0
