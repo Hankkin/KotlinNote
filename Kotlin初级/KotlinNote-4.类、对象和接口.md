@@ -103,3 +103,32 @@ class User(val name: String,val age: Int = 11)
 
 如果你想确保你的类不被其他代码实例化，必须把构造方法标记为private：
 
+
+
+```java
+class User private constructor(){}
+```
+
+### 2. 构造方法：用不同的方式来初始化父类
+
+```java
+open class View {
+    constructor(ctx: Context){
+        
+    }
+}
+```
+
+### 3.实现在接口中声明的属性
+
+在Kotlin中，接口可以包含抽象属性声明
+
+```kotlin
+inteface User {
+    val name: String
+}
+这意味着实现User接口的类需要提供一个取得name的方式。接口并没有说明这个值应该存储到一个支持字段还是通过getter来获取。接口本身并不包含任何状态，因此只有实现这个接口的类在需要的情况下会存储这个值
+```
+
+
+
